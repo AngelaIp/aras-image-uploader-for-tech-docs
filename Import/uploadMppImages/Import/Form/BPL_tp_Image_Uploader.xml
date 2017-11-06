@@ -1,0 +1,136 @@
+﻿<AML>
+ <Item type="Form" id="DA1D2A3DB1804F0EAF7ACF5CD46DF3CD" action="add">
+  <category_form>0</category_form>
+  <height>234</height>
+  <stylesheet><![CDATA[../styles/default.css]]></stylesheet>
+  <width>699</width>
+  <name>BPL_tp_Image_Uploader</name>
+  <Relationships>
+   <Item type="Body" id="86CEFBF436A844649950E96C95783DB1" action="add">
+    <bg_color>#FFFFFF</bg_color>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="BPL_tp_Image_Uploader" type="Form">DA1D2A3DB1804F0EAF7ACF5CD46DF3CD</source_id>
+    <Relationships>
+     <Item type="Field" id="7F3BC81F96574C5FB992B0858A940487" action="add">
+      <border_width>0</border_width>
+      <display_length>400</display_length>
+      <display_length_unit>px</display_length_unit>
+      <field_type>text</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Default Name</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="bpl_default_name" type="Property">803916AE3FB943FCA2C2A48F1CD28A27</propertytype_id>
+      <sort_order>512</sort_order>
+      <source_id keyed_name="86CEFBF436A844649950E96C95783DB1" type="Body">86CEFBF436A844649950E96C95783DB1</source_id>
+      <tab_index>3072</tab_index>
+      <tab_stop>1</tab_stop>
+      <x>190</x>
+      <y>60</y>
+      <name>bpl_default_name</name>
+     </Item>
+     <Item type="Field" id="5BF06710BB394AE59E8EE275F669CF29" action="add">
+      <border_width>0</border_width>
+      <display_length>200</display_length>
+      <display_length_unit>px</display_length_unit>
+      <field_type>text</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">P/N Prefix</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="bpl_item_number_prefix" type="Property">60CA827022D440E3B72F8D870A19C0CE</propertytype_id>
+      <sort_order>384</sort_order>
+      <source_id keyed_name="86CEFBF436A844649950E96C95783DB1" type="Body">86CEFBF436A844649950E96C95783DB1</source_id>
+      <tab_index>3200</tab_index>
+      <tab_stop>1</tab_stop>
+      <x>190</x>
+      <y>15</y>
+      <name>bpl_item_number_prefix</name>
+     </Item>
+     <Item type="Field" id="0CDB3140B4B244BE9651F1A47B10472B" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>html</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <html_code><![CDATA[<h4>Anleitung:</h4>
+1. Defaultwerte setzen</br>
+2. Bilder per drag&drop in den File Reiter ziehen</br>
+3. Bildeigenschaften im Filereiter bei Bedarf nochmals anpassen</br>
+4. Klicke "Save" um die neuen Bilder hochzuladen</br>
+ACHTUNG: Einmal gespeicherte Bild Eigenschaften können hier nicht mehr überschrieben werden!</br>
+BETA Version]]></html_code>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>640</sort_order>
+      <source_id keyed_name="86CEFBF436A844649950E96C95783DB1" type="Body">86CEFBF436A844649950E96C95783DB1</source_id>
+      <tab_stop>1</tab_stop>
+      <x>652</x>
+      <y>5</y>
+      <name>info</name>
+     </Item>
+     <Item type="Field" id="1AB3CFFDFECD4CEDA1B60212670E3C10" action="add">
+      <display_length_unit>px</display_length_unit>
+      <field_type>html</field_type>
+      <html_code><![CDATA[<span id='ITEM_INFO_INTERNAL_SPAN'/>
+<script>
+  populate_ITEM_INFO_INTERNAL_SPAN = function()
+  {
+    document.getElementById('ITEM_INFO_INTERNAL_SPAN').innerHTML = aras.uiGetItemInfoTable(document.itemType);
+  }
+  window.addEventListener('load', populate_ITEM_INFO_INTERNAL_SPAN);
+</script>]]></html_code>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>128</sort_order>
+      <source_id keyed_name="86CEFBF436A844649950E96C95783DB1" type="Body">86CEFBF436A844649950E96C95783DB1</source_id>
+      <tab_stop>0</tab_stop>
+      <x>0</x>
+      <y>0</y>
+      <name>item_info</name>
+     </Item>
+     <Item type="Field" id="CC856AE2847B44A4AD35C8D3D4E2BE4A" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>html</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <html_code><![CDATA[<script>
+    var p1= getFieldByName("bpl_item_number_prefix").getElementsByTagName("input")[0];
+    p1.setAttribute("placeholder", "z.B. ABC -> wird zu ABC_0001");
+    var p2= getFieldByName("bpl_default_name").getElementsByTagName("input")[0];
+    p2.setAttribute("placeholder", "z.B. Assembly picture");
+</script>]]></html_code>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>768</sort_order>
+      <source_id keyed_name="86CEFBF436A844649950E96C95783DB1" type="Body">86CEFBF436A844649950E96C95783DB1</source_id>
+      <tab_stop>1</tab_stop>
+      <x>449</x>
+      <y>7</y>
+      <name>placeholder</name>
+     </Item>
+    </Relationships>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

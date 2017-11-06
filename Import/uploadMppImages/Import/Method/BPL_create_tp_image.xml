@@ -1,0 +1,49 @@
+﻿<AML>
+ <Item type="Method" id="E1B7F5D4DFD44A08AD24FE7C8705D4AA" action="add">
+  <comments>add a new tp_image Item</comments>
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[// Angela Ippisch / b+ @ 2017-11-06
+
+// This Method adds a new tp_Image Item for each Relationship File Item
+// The Method is used as 'OnAfterAdd' Server Event in ItemType 'BPL_tp_Image_Uploader_File'
+
+Innovator inn = this.getInnovator();
+string thisType = this.getType(); // BPL_tp_Image_Uploader_File
+
+string relship_id = this.getAttribute("typeId");
+Item relationship = this.newItem("RelationshipType", "get");
+if (string.IsNullOrEmpty(relship_id))
+{
+	relationship.setProperty("name", this.getAttribute("type"));
+}
+else
+{
+	relationship.setProperty("relationship_id", relship_id);
+}
+relationship.setAttribute("select", "source_id(name)"); // BPL_tp_Image_Uploader
+relationship = relationship.apply();
+
+if(relationship.isError())
+{
+  return relationship;
+}
+
+Item source_it = relationship.getPropertyItem("source_id"); // source item
+string source_id = this.getProperty("source_id"); // id of source item
+string related_id = this.getProperty("related_id"); // id of File item
+string imageName = this.getProperty("bpl_image_name");
+string imagePN = this.getProperty("bpl_image_pn");
+string imageID = this.getProperty("related_id");
+
+// Create new tp_image 
+var imgItem = inn.newItem("tp_Image","add");
+imgItem.setProperty("item_number", imagePN); 
+imgItem.setProperty("name", imageName); 
+imgItem.setProperty("src", "vault:///?fileId=" + imageID); // -> vault:///?fileId=12345....
+imgItem.apply();
+
+return null;]]></method_code>
+  <method_type>C#</method_type>
+  <name>BPL_create_tp_image</name>
+ </Item>
+</AML>

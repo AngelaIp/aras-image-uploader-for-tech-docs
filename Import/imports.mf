@@ -1,0 +1,3 @@
+<imports>
+  <package name="bpl.app.uploadMppImages" path="uploadMppImages\Import" />
+</imports>

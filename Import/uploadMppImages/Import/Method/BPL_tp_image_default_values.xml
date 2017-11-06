@@ -1,0 +1,83 @@
+﻿<AML>
+ <Item type="Method" id="015B0B82D2B54DB8A9D01BF29604B6AE" action="add">
+  <comments>set sort_order and default values</comments>
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[// Angela Ippisch / b+ @ 2017-11-06
+// This Method sets various default value in the File Relationship of the BPL_tp_Image_Uploader.
+// Default values can be set in the corresponding Form by the user.
+// The Method is used as 'OnInsertRow' Method in RelationshipType 'BPL_tp_Image_Uploader_File'
+
+var prt = typeof(parent.document.item) == "object" ? parent.document : parent.parent;
+var tmpThisItem = typeof(parent.document.thisItem) == "object" ? parent.document.thisItem : parent.thisItem;
+
+var relshipNd = prt.item.selectSingleNode("Relationships/Item[@id='" + relationshipID + "' and related_id/Item]");
+if (!relshipNd) return;
+var relatedNd = relshipNd.selectSingleNode("related_id/Item");
+var filename = top.aras.getItemProperty(relatedNd, "filename", undefined); // get File name propery
+
+/*
+// Check if file is an image -tbd
+var fileext = filename.substr(filename.length - 3); // e.g. jpg
+if (fileext != ("jpg" || "png" || "JPG" || "PNG")){
+    return alert ("Das File ist kein Bild!");
+}
+*/
+
+var maxVal = 0;
+var rels = tmpThisItem.getRelationships(relationshipTypeName);
+var count = rels.getItemCount();
+for (var i = 0; i < count; i++) 
+{
+	var rel = rels.getItemByIndex(i);
+	var sort_order = parseInt(rel.getProperty("sort_order"));
+	if (sort_order > maxVal) 
+	{
+		maxVal = sort_order;
+	}
+}
+
+var newMaxVal = maxVal + 1;
+
+var leadingZeros = "";
+var len = newMaxVal.toString().length;
+if (len == 1) 
+{
+    leadingZeros = "000";
+} else if (len == 2) {
+    leadingZeros = "00";
+} else if (len == 3){
+    leadingZeros = "0";
+} else {
+    leadingZeros = "";
+}
+
+
+var thisRel = tmpThisItem.getItemsByXPath("//Item[@id='" + relationshipID + "']").getItemByIndex(0);
+
+// Set sort_order
+thisRel.setProperty("sort_order", newMaxVal);
+grid.items_Experimental.set(relationshipID, "value", "sort_order_D", newMaxVal);
+
+// Get default Values from Form
+var defaultPN = tmpThisItem.getProperty("bpl_item_number_prefix",""); // from Form
+var defaultName = tmpThisItem.getProperty("bpl_default_name",""); // from Form
+
+// set Graphic Number
+if (defaultPN)
+{
+    thisRel.setProperty("bpl_image_pn", defaultPN + "_" + leadingZeros + "" + newMaxVal); // dieser Wert wird letztendlich gespeichert
+    grid.items_Experimental.set(relationshipID, "value", "bpl_image_pn_D", defaultPN + "_" + leadingZeros + "" + newMaxVal); // dieser Wert wird zur Laufzeit angezeigt
+}
+
+// set Graphic Name
+if (defaultName)
+{
+    thisRel.setProperty("bpl_image_name", defaultName); // dieser Wert wird letztendlich gespeichert
+    grid.items_Experimental.set(relationshipID, "value", "bpl_image_name_D", defaultName); // dieser Wert wird zur Laufzeit angezeigt
+}
+
+return;]]></method_code>
+  <method_type>JavaScript</method_type>
+  <name>BPL_tp_image_default_values</name>
+ </Item>
+</AML>
