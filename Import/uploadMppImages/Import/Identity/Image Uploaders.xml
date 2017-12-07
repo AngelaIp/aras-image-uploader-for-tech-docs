@@ -1,0 +1,7 @@
+﻿<AML>
+ <Item type="Identity" id="FA3CDC30103843498152D19507690F59" action="add">
+  <description>Add identities to this group to grant TOC access/permissions</description>
+  <is_alias>0</is_alias>
+  <name>BPL_Image Uploaders</name>
+ </Item>
+</AML>
