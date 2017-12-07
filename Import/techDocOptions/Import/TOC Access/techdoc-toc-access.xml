@@ -1,0 +1,8 @@
+﻿<AML>
+ <Item type="TOC Access" id="17B7801F91024D69ABF350F3A8267D36" action="add">
+  <related_id keyed_name="BPL_Image Uploaders" type="Identity">FA3CDC30103843498152D19507690F59</related_id>
+  <sort_order>128</sort_order>
+  <source_id keyed_name="BPL_tp_Image_Uploader" type="ItemType" name="BPL_tp_Image_Uploader">B30D78F065C3486B8B27763805238DAA</source_id>
+  <category>Technical Documentation</category>
+ </Item>
+</AML>

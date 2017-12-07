@@ -69,15 +69,15 @@
     <source_id keyed_name="BPL_tp_Image_Uploader" type="ItemType" name="BPL_tp_Image_Uploader">B30D78F065C3486B8B27763805238DAA</source_id>
     <type>default</type>
    </Item>
-   <Item type="TOC Access" id="F61D7A10880D4322AB6DB742480773E2" action="add">
-    <related_id keyed_name="Manufacturing Engineering" type="Identity">D46B8ECBDB0C4D94BFF7A93D36FAB474</related_id>
+   <Item type="Can Add" id="0976F7DF54364C5E8B8F57215413B418" action="add">
+    <can_add>1</can_add>
+    <related_id keyed_name="BPL_Image Uploaders" type="Identity">FA3CDC30103843498152D19507690F59</related_id>
     <sort_order>128</sort_order>
     <source_id keyed_name="BPL_tp_Image_Uploader" type="ItemType" name="BPL_tp_Image_Uploader">B30D78F065C3486B8B27763805238DAA</source_id>
-    <category>Process</category>
    </Item>
    <Item type="Can Add" id="DA5D9B78CA0549BAAEFC54CF53FD7AAE" action="add">
     <can_add>1</can_add>
-    <related_id keyed_name="Manufacturing Engineering" type="Identity">D46B8ECBDB0C4D94BFF7A93D36FAB474</related_id>
+    <related_id keyed_name="BPL_Image Uploaders" type="Identity">FA3CDC30103843498152D19507690F59</related_id>
     <sort_order>128</sort_order>
     <source_id keyed_name="BPL_tp_Image_Uploader" type="ItemType" name="BPL_tp_Image_Uploader">B30D78F065C3486B8B27763805238DAA</source_id>
    </Item>

@@ -1,0 +1,7 @@
+<AML>
+  <Item type="Member" id="344BFE7217B54342992175DBD9537F86" action="add">
+    <related_id keyed_name="Technical Document Author" type="Identity">6E4010637C1941748089C622D9C259F2</related_id>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="BPL_Image Uploaders" type="Identity">FA3CDC30103843498152D19507690F59</source_id>
+  </Item>
+</AML>

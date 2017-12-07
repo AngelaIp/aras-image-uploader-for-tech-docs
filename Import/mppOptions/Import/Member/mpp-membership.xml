@@ -1,0 +1,7 @@
+<AML>
+  <Item type="Member" id="812B029D4950454FB53AAA4F30336CD9" action="add">
+    <related_id keyed_name="Manufacturing Engineering" type="Identity">D46B8ECBDB0C4D94BFF7A93D36FAB474</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="BPL_Image Uploaders" type="Identity">FA3CDC30103843498152D19507690F59</source_id>
+  </Item>
+</AML>
