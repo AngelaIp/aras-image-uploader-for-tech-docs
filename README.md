@@ -27,11 +27,12 @@ Internet Explorer 11, Chrome 61.0, Firefox ESR 52.4.0
 #### Important!
 **Always back up your code tree and database before applying an import package or code tree patch!**
 
-### Pre-requisites
+### Prerequisites
 
 1. Aras Innovator installed (version 11.0 SPx preferred)
 2. Aras Package Import tool
 3. Import package of this project
+4. MPP and/or Tech Docs must be installed in the target database
 
 ### Install Steps
 
@@ -43,16 +44,18 @@ Internet Explorer 11, Chrome 61.0, Firefox ESR 52.4.0
     * Optional: Enter a description in the Description field.
 5. Enter the path to your local `..\uploadMppImages\Import\imports.mf` file in the Manifest File field.
 6. Select **bpl.app.uploadMppImages** in the Available for Import field.
-7. Select Type = **Merge** and Mode = **Thorough Mode**.
-8. Click **Import** in the top left corner.
-9. Close the Aras Package Import tool.
+7. If the target database has the Technical Documentation application installed, select the **bpl.app.uploadMppImages.techDocOptions** package.
+8. If the target database has the MPP application installed, select the **bpl.app.uploadMppImages.mppOptions** package.
+9. Select Type = **Merge** and Mode = **Thorough Mode**.
+10. Click **Import** in the top left corner.
+11. Close the Aras Package Import tool.
 
 You are now ready to login to Aras and try out the image importer.
 
 ## Usage
 
 1. Login to Aras.
-2. Make sure, that you are a member of the Identity **Manufacturing Engineering**
+2. Make sure, that you are a member of the Identity **Manufacturing Engineering** or **Technical Documentation Author**.
 3  Navigate to **Process > Upload Image** in the table of contents (TOC).
 4. Right click on **Upload Image** and click **New Upload Images** 
 ![aras-image-uploader-for-tech-docs](./Screenshots/1_StartUploader.png)
