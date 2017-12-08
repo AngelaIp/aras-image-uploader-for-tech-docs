@@ -8,6 +8,33 @@
   <Relationships>
    <Item type="Body" id="86CEFBF436A844649950E96C95783DB1" action="add">
     <bg_color>#FFFFFF</bg_color>
+    <css>.info-content {
+  width: 350px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  background-color: white;
+  height: 140px;
+  padding: 10px;
+  border: 1px solid #E78E46;
+}
+.info-btn {
+  border: 1px solid white;
+  padding-left: 10px;
+  margin-bottom: 0px;
+  cursor:pointer;
+}
+#english-btn, #german-btn {
+  width: 100px;
+}
+.active-info-btn {
+  background-color: #E78E46;
+  color: #444444;
+}
+.inactive-info-btn {
+  background-color: #444444;
+  color: #E78E46;
+}</css>
     <sort_order>128</sort_order>
     <source_id keyed_name="BPL_tp_Image_Uploader" type="Form">DA1D2A3DB1804F0EAF7ACF5CD46DF3CD</source_id>
     <Relationships>
@@ -57,7 +84,7 @@
       <y>15</y>
       <name>bpl_item_number_prefix</name>
      </Item>
-     <Item type="Field" id="0CDB3140B4B244BE9651F1A47B10472B" action="add">
+     <Item type="Field" id="2D1B92FCB5A14BC0A673F583B2306DE8" action="add">
       <border_width>0</border_width>
       <display_length_unit>px</display_length_unit>
       <field_type>html</field_type>
@@ -65,13 +92,65 @@
       <font_family>tahoma, arial, helvetica, sans-serif</font_family>
       <font_size>8pt</font_size>
       <font_weight>bold</font_weight>
-      <html_code><![CDATA[<h4>Anleitung:</h4>
-1. Defaultwerte setzen</br>
-2. Bilder per drag&drop in den File Reiter ziehen</br>
-3. Bildeigenschaften im Filereiter bei Bedarf nochmals anpassen</br>
-4. Klicke "Save" um die neuen Bilder hochzuladen</br>
-ACHTUNG: Einmal gespeicherte Bild Eigenschaften können hier nicht mehr überschrieben werden!</br>
-BETA Version]]></html_code>
+      <html_code><![CDATA[<div id="german-btn" class="info-btn active-info-btn">
+<h4>Anleitung:</h4>
+</div>]]></html_code>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>1152</sort_order>
+      <source_id keyed_name="86CEFBF436A844649950E96C95783DB1" type="Body">86CEFBF436A844649950E96C95783DB1</source_id>
+      <tab_stop>1</tab_stop>
+      <x>653</x>
+      <y>9</y>
+      <z_index>0</z_index>
+      <name>de_btn</name>
+     </Item>
+     <Item type="Field" id="F4FCCA61A2AA4C5BAB478768E6BDA1B6" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>html</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <html_code><![CDATA[<div id="english-btn" class="info-btn inactive-info-btn">
+<h4>Manual:</h4>
+</div>]]></html_code>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>1024</sort_order>
+      <source_id keyed_name="86CEFBF436A844649950E96C95783DB1" type="Body">86CEFBF436A844649950E96C95783DB1</source_id>
+      <tab_stop>1</tab_stop>
+      <x>763</x>
+      <y>9</y>
+      <z_index>0</z_index>
+      <name>en_btn</name>
+     </Item>
+     <Item type="Field" id="0CDB3140B4B244BE9651F1A47B10472B" action="add">
+      <border_width>0</border_width>
+      <css />
+      <display_length_unit>px</display_length_unit>
+      <field_type>html</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <html_code><![CDATA[<div class="info-container">
+<div id="german-info" class="info-content">
+<ol>
+<li>Defaultwerte setzen</li>
+<li>Bilder per drag&drop in den File Reiter ziehen</li>
+<li>Bildeigenschaften im Filereiter bei Bedarf nochmals anpassen</li>
+<li>Klicke "Save" um die neuen Bilder hochzuladen</li>
+</ol>
+<p>ACHTUNG: Einmal gespeicherte Bild Eigenschaften können hier nicht mehr überschrieben werden!</p>
+<p>BETA Version</p>
+</div>
+</div>]]></html_code>
       <is_disabled>0</is_disabled>
       <is_visible>1</is_visible>
       <label_position>top</label_position>
@@ -79,9 +158,44 @@ BETA Version]]></html_code>
       <sort_order>640</sort_order>
       <source_id keyed_name="86CEFBF436A844649950E96C95783DB1" type="Body">86CEFBF436A844649950E96C95783DB1</source_id>
       <tab_stop>1</tab_stop>
-      <x>652</x>
-      <y>5</y>
-      <name>info</name>
+      <x>654</x>
+      <y>53</y>
+      <z_index>1</z_index>
+      <name>info_de</name>
+     </Item>
+     <Item type="Field" id="30DE0A964AD74AFCB64B5114EB2406AF" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>html</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <html_code><![CDATA[<div class="info-container">
+
+</div>
+<div id="english-info" class="info-content">
+<ol>
+<li>Set default values.</li>
+<li>Drag and drop pictures into the file tab.</li>
+<li>If necessary, adjust the image properties in the grid.</li>
+<li>Click "Save" to upload the new pictures</li>
+</ol>
+<p>ATTENTION: Image properties can not be overwritten once saved.</p>
+<p>BETA Version</p>
+</div>
+</div>]]></html_code>
+      <is_disabled>0</is_disabled>
+      <is_visible>0</is_visible>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>896</sort_order>
+      <source_id keyed_name="86CEFBF436A844649950E96C95783DB1" type="Body">86CEFBF436A844649950E96C95783DB1</source_id>
+      <tab_stop>1</tab_stop>
+      <x>654</x>
+      <y>53</y>
+      <z_index>1</z_index>
+      <name>info_en</name>
      </Item>
      <Item type="Field" id="1AB3CFFDFECD4CEDA1B60212670E3C10" action="add">
       <display_length_unit>px</display_length_unit>
@@ -130,6 +244,16 @@ BETA Version]]></html_code>
       <name>placeholder</name>
      </Item>
     </Relationships>
+   </Item>
+   <Item type="Form Event" id="549D644BA2394BFB95CB605F75E8EF22" action="add">
+    <form_event>onload</form_event>
+    <related_id keyed_name="BPL_toggle-info" type="Method">
+     <Item type="Method" action="get" select="id">
+      <name>BPL_toggle-info</name>
+     </Item>
+    </related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="BPL_tp_Image_Uploader" type="Form">DA1D2A3DB1804F0EAF7ACF5CD46DF3CD</source_id>
    </Item>
   </Relationships>
  </Item>
