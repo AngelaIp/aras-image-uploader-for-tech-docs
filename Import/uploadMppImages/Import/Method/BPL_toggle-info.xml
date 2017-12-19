@@ -1,0 +1,33 @@
+﻿<AML>
+ <Item type="Method" id="782E7163308448FDA85732BF7B59003A" action="add">
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[var deBtn = document.getElementById("german-btn");
+var enBtn = document.getElementById("english-btn");
+var deContent = document.getElementById("german-info");
+var enContent = document.getElementById("english-info");
+
+deBtn.addEventListener("click",function(){
+    deBtn.className = deBtn.className.replace(new RegExp('(?:^|\\s)'+ 
+                                    "inactive-info-btn" + '(?:\\s|$)'), " active-info-btn ");
+    
+    enBtn.className = enBtn.className.replace(new RegExp('(?:^|\\s)'+ 
+                                    "active-info-btn" + '(?:\\s|$)'), " inactive-info-btn ");
+    
+    deContent.style.visibility = "visible";
+    enContent.style.visibility = "hidden";
+});
+
+enBtn.addEventListener("click",function(){
+    enBtn.className = enBtn.className.replace(new RegExp('(?:^|\\s)'+ 
+                                    "inactive-info-btn" + '(?:\\s|$)'), " active-info-btn ");
+    
+    deBtn.className = deBtn.className.replace(new RegExp('(?:^|\\s)'+ 
+                                    "active-info-btn" + '(?:\\s|$)'), " inactive-info-btn ");
+    
+    enContent.style.visibility = "visible";
+    deContent.style.visibility = "hidden";
+});]]></method_code>
+  <method_type>JavaScript</method_type>
+  <name>BPL_toggle-info</name>
+ </Item>
+</AML>
