@@ -4,7 +4,7 @@
   <behavior>float</behavior>
   <copy_permissions>0</copy_permissions>
   <create_related>0</create_related>
-  <grid_view>left</grid_view>
+  <grid_view>right</grid_view>
   <hide_in_all>0</hide_in_all>
   <inc_rel_key_name>1</inc_rel_key_name>
   <inc_related_key_name>1</inc_related_key_name>
@@ -99,6 +99,24 @@
  </Item>
  <Item type="ItemType" id="4438EFB7F4D040FFAAFE392B55970346" action="edit">
   <Relationships>
+   <Item type="Property" action="edit" where="source_id='4438EFB7F4D040FFAAFE392B55970346' and name='related_id'">
+    <column_alignment>left</column_alignment>
+    <data_source keyed_name="File" type="ItemType" name="File">8052A558B9084D41B9F11805E464F443</data_source>
+    <data_type>item</data_type>
+    <is_hidden>0</is_hidden>
+    <is_hidden2>0</is_hidden2>
+    <is_indexed>1</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <item_behavior>float</item_behavior>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>1</sort_order>
+    <source_id keyed_name="BPL_tp_Image_Uploader_File" type="ItemType" name="BPL_tp_Image_Uploader_File">4438EFB7F4D040FFAAFE392B55970346</source_id>
+    <track_history>0</track_history>
+    <name>related_id</name>
+   </Item>
    <Item type="Property" action="edit" where="source_id='4438EFB7F4D040FFAAFE392B55970346' and name='sort_order'">
     <column_alignment>left</column_alignment>
     <data_type>integer</data_type>

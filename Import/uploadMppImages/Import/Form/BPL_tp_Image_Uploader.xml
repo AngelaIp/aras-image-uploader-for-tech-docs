@@ -72,7 +72,7 @@
       <font_weight>bold</font_weight>
       <is_disabled>0</is_disabled>
       <is_visible>1</is_visible>
-      <label xml:lang="en">P/N Prefix</label>
+      <label xml:lang="en">Graphic Number Prefix</label>
       <label_position>top</label_position>
       <list_no_blank>0</list_no_blank>
       <propertytype_id keyed_name="bpl_item_number_prefix" type="Property">60CA827022D440E3B72F8D870A19C0CE</propertytype_id>
