@@ -1,3 +1,11 @@
 <imports>
+  <package name="bpl.app.uploadMppImages.mppOptions" path="mppOptions\Import">
+    <dependson name="bpl.app.uploadMppImages" />
+    <dependson name="com.aras.innovator.solution.MPP-Application" />
+  </package>
   <package name="bpl.app.uploadMppImages" path="uploadMppImages\Import" />
+  <package name="bpl.app.uploadMppImages.techDocOptions" path="techDocOptions\Import">
+    <dependson name="bpl.app.uploadMppImages" />
+    <dependson name="com.aras.innovator.solution.TechDoc" />
+  </package>
 </imports>
