@@ -1,0 +1,16 @@
+﻿<AML>
+ <Item type="CommandBarSectionItem" id="61D8069DC670495E982E97568663DCAC" action="add">
+  <action>Add</action>
+  <related_id keyed_name="bpl_mpp_upload_images" type="CommandBarItem">
+   <Item type="CommandBarButton" id="60BC427764534C9987B67DF49DE2B910" action="add">
+    <image>../customer/icons/UploadOff.svg</image>
+    <on_click_handler keyed_name="BPL_create_tp_image_uploader" type="Method">56EB6C3A965B4B4CB7D656E0F9D3BA3D</on_click_handler>
+    <on_init_handler keyed_name="mpp_InitSidebarItems" type="Method">8E03B7E9980E4EFFB977C76FF13CCBB2</on_init_handler>
+    <name>bpl_mpp_upload_images</name>
+   </Item>
+  </related_id>
+  <role keyed_name="Manufacturing Engineering" type="Identity">D46B8ECBDB0C4D94BFF7A93D36FAB474</role>
+  <sort_order>512</sort_order>
+  <source_id keyed_name="MPP Sidebar" type="CommandBarSection">23281A91255D42B4803C2F98B91184F0</source_id>
+ </Item>
+</AML>

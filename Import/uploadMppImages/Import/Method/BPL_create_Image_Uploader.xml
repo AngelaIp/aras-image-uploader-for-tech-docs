@@ -1,0 +1,19 @@
+﻿<AML>
+ <Item type="Method" id="817D6B72F4754BC5A76AD5BF07C66DD4" action="add">
+  <comments>Starts Image Uploader from a CUI button or Action event</comments>
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[// Angela Ippisch / b+ @ 2017-12-19
+
+var inn = new Innovator();
+var uploader = inn.newItem("BPL_tp_Image_Uploader", "add");
+uploader = uploader.apply();
+if (uploader.isError()) {
+	 top.aras.AlertError(uploader.getErrorString(), uploader.getErrorDetail());
+}
+
+// Open the item in a new window
+top.aras.uiShowItemEx(uploader.node, "tab view", true, false);]]></method_code>
+  <method_type>JavaScript</method_type>
+  <name>BPL_create_tp_image_uploader</name>
+ </Item>
+</AML>

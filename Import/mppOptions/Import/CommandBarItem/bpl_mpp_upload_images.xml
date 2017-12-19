@@ -1,0 +1,8 @@
+﻿<AML>
+ <Item type="CommandBarButton" id="60BC427764534C9987B67DF49DE2B910" action="add">
+  <image>../customer/icons/UploadOff.svg</image>
+  <on_click_handler keyed_name="BPL_create_tp_image_uploader" type="Method">817D6B72F4754BC5A76AD5BF07C66DD4</on_click_handler>
+  <on_init_handler keyed_name="mpp_InitSidebarItems" type="Method">8E03B7E9980E4EFFB977C76FF13CCBB2</on_init_handler>
+  <name>bpl_mpp_upload_images</name>
+ </Item>
+</AML>
