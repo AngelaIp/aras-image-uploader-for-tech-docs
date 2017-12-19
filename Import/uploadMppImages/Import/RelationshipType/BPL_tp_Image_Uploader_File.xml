@@ -13,7 +13,7 @@
   <new_show_related>0</new_show_related>
   <related_id keyed_name="File" type="ItemType" name="File">8052A558B9084D41B9F11805E464F443</related_id>
   <related_notnull>1</related_notnull>
-  <related_option>2</related_option>
+  <related_option>1</related_option>
   <relationship_id keyed_name="BPL_tp_Image_Uploader_File" type="ItemType" name="BPL_tp_Image_Uploader_File">
    <Item type="ItemType" id="4438EFB7F4D040FFAAFE392B55970346" action="add">
     <allow_private_permission>1</allow_private_permission>
