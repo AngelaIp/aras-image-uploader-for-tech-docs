@@ -73,8 +73,7 @@ You are now ready to login to Aras and try out the image importer.
 6. Add images to the Files tab with drag'n'drop.
 ![aras-image-uploader-for-tech-docs](./Screenshots/2_UploadImages.png)
 7. Click **Save** to upload the files
-
-WARNING: Once stored image properties can not be overwritten!
+    * WARNING: Once stored image properties can not be overwritten!
 8. Navigate to **Process > Graphics** and find your new Images there!
 ![aras-image-uploader-for-tech-docs](./Screenshots/3_Result.png)
 
