@@ -7,7 +7,7 @@ This project contains an import package that adds an additional **Upload Images*
 Normally you have to do the following steps to upload graphics for MPP Process Plans:
 Graphics -> New Graphic… -> Select an image… ->  External File –> Start file picker -> Pick the file -> OK
 
-Repeating this procedure for around 100 pictures of a work instruction is probably the most dismal work in the world.
+Adding 100 pictures to a work instruction would require repeating these steps for each image.
 But help is at hand!
 With the feature you can add multiple graphics at once!
 
@@ -36,6 +36,16 @@ Internet Explorer 11, Chrome 61.0, Firefox ESR 52.4.0
 
 ### Install Steps
 
+#### Code tree Installation
+These code tree changes only contain a custom icon for the toolbar. If you wish to use your own icon, you may replace the .svg file in the `\Innovator\` folder with your own.
+
+1. Backup your code tree and store the archive in a safe place
+2. Navigate to your local `..\aras-image-uploader-for-tech-docs\` folder
+3. Copy the `\Innovator\` folder 
+4. Paste this at the root of your install directory
++ By default this is `C:\Program Files\Aras\Innovator\`
+
+#### Database Installation
 1. Backup your database and store the BAK file in a safe place.
 2. Open up the Aras Package Import tool.
 3. Enter your login credentials and click **Login**
@@ -56,15 +66,16 @@ You are now ready to login to Aras and try out the image importer.
 
 1. Login to Aras.
 2. Make sure, that you are a member of the Identity **Manufacturing Engineering** or **Technical Documentation Author**.
-3  Navigate to **Process > Upload Image** in the table of contents (TOC).
+3. Navigate to **Process > Upload Image** in the table of contents (TOC).
 4. Right click on **Upload Image** and click **New Upload Images** 
 ![aras-image-uploader-for-tech-docs](./Screenshots/1_StartUploader.png)
 5. Set default values for the Graphics number and Name in the Form
 6. Add images to the Files tab with drag'n'drop.
 ![aras-image-uploader-for-tech-docs](./Screenshots/2_UploadImages.png)
 7. Click **Save** to upload the files
+
 WARNING: Once stored image properties can not be overwritten!
-8. Navigate to **Process > Grahpics** and find your new Images there!
+8. Navigate to **Process > Graphics** and find your new Images there!
 ![aras-image-uploader-for-tech-docs](./Screenshots/3_Result.png)
 
 ## Contributing
@@ -75,6 +86,12 @@ WARNING: Once stored image properties can not be overwritten!
 4. Push to the branch: `git push origin my-new-feature`
 5. Submit a pull request
 
+## Credits
+
+Created by @AngelaIp
+
+Contributions by:
+* @EliJDonahue
 
 ## License
 
