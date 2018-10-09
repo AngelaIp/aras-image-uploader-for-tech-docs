@@ -37,6 +37,7 @@ string imageID = this.getProperty("related_id");
 
 // Create new tp_image 
 var imgItem = inn.newItem("tp_Image","add");
+imgItem.setAttribute("doGetItem", "0");
 imgItem.setProperty("item_number", imagePN); 
 imgItem.setProperty("name", imageName); 
 imgItem.setProperty("src", "vault:///?fileId=" + imageID); // -> vault:///?fileId=12345....

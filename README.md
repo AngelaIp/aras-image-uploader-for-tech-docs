@@ -17,10 +17,10 @@ With the feature you can add multiple graphics at once!
 Aras 11.0 SP9
 
 #### Versions Tested:
-Aras 11.0 SP9
+Aras 11.0 SP9, Aras 11.0 SP11
 
 #### Browsers Tested:
-Internet Explorer 11, Chrome 61.0, Firefox ESR 52.4.0
+Internet Explorer 11, Chrome 69.0, Firefox ESR 60.2.0
 
 ## Installation
 
